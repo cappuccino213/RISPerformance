@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f7ced4e5-37da-489d-916e-7fbde79f3712" name="21RISPerformance" url="http://192.168.1.21">
+        <fileTransfer host="192.168.1.21" port="21" rootFolder="/Performance">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="0c125240-35fc-4f44-8990-b92fadd3c0f7" name="32RISPerformance" url="http://192.168.1.32">
+        <fileTransfer host="192.168.1.32" port="21" rootFolder="/Performance/RIS">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
