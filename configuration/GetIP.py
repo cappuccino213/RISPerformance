@@ -8,11 +8,21 @@
 # @Contact : yeahcheung213@163.com
 import socket
 
+# def local_ip():
+# 	hostname = socket.gethostname()
+# 	ip = socket.gethostbyname(hostname)
+# 	return ip
 
 def local_ip():
-	hostname = socket.gethostname()
-	ip = socket.gethostbyname(hostname)
-	return ip
+	try:
+		csock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+		csock.connect(('8.8.8.8', 80))
+		(addr, port) = csock.getsockname()
+		csock.close()
+		return addr
+	except socket.error:
+		return "127.0.0.1"
 
 
-# print(local_ip())
+if __name__ == '__main__':
+	print(local_ip())
